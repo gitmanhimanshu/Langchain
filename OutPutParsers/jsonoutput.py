@@ -41,5 +41,5 @@ prompt=PromptTemplate(
     partial_variables={"format_instructions":parser.get_format_instructions()}
 )
 chain=prompt|llm|parser
-r=chain.invoke("giv prime numbrer code in java")
+r=chain.invoke({"query": "giv prime numbrer code in java"})
 print(r)
